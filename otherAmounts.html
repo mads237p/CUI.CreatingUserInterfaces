@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <nav>
+        <ul id="menu_security">
+            <h1>Thank you for choosing MTA</h1>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="wrapper">
+            <div class="layout">
+                <span id="message">
+                    <b>Which amount do you want?</b>
+                </span>
+                <div class="buttonBox_amount">
+                    <form id="frm1" action="">
+
+                        <input id="amount" data-filter="amount" name="dollars" type="numbers" maxlength="3">
+
+                        <button>ACCEPT</button>
+                    </form>
+
+                    <a href="index.html">
+                        <button class="cancel security" type="button" name="button">Cancel</button></a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", start);
+
+        var newAmount = "Do you want to add $";
+        //var amount = input;
+        function start() {
+
+            console.log("start");
+
+            document.querySelector("button").addEventListener("click", amount);
+
+        }
+
+        function amount() {
+
+            console.log("knap");
+            var amount = document.getElementById("amount").value;
+            document.getElementById("message").innerHTML = newAmount + amount + "?";
+
+            console.log(amount);
+        }
+
+    </script>
+</body>
+
+</html>
